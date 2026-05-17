@@ -473,9 +473,9 @@ export default function ITILCourse() {
     setCompleted(prev => ({ ...prev, [key]: true }));
   };
 
-  const isLessonComplete = (w, l) => completed[`${w}-${l}`];
+  const isLessonComplete = (w: any, l: any) => completed[`${w}-${l}`];
 
-  const handleQuizAnswer = (qi, answer) => {
+  const handleQuizAnswer = (qi: any, answer: any) => {
     setQuizAnswers(prev => ({ ...prev, [qi]: answer }));
   };
 
@@ -488,7 +488,7 @@ export default function ITILCourse() {
 
   const quizScore = module.quiz.filter((q, i) => quizAnswers[i] === q.a).length;
 
-  const changeWeek = (idx) => {
+  const changeWeek = (idx: any) => {
     setActiveWeek(idx);
     setActiveLesson(0);
     setView("lesson");
